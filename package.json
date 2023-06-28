@@ -1,0 +1,35 @@
+{
+  "name": "auth-nestjs-xsa",
+  "version": "1.0.0",
+  "description": "Example authorization of Nest.js application in XS Advanced",
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "server:start": "cd server && npm run start:prod",
+    "server:dev": "cd server && npm run start:dev",
+    "server:build": "cd server && npm run build",
+    "server:lint": "cd server && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslav-BV/auth-nestjs-xsa.git"
+  },
+  "keywords": [
+    "sap",
+    "hana",
+    "xsa",
+    "xs advanced",
+    "nestjs"
+  ],
+  "author": "Yaroslav Badikov <iav.badikov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaroslav-BV/auth-nestjs-xsa/issues"
+  },
+  "homepage": "https://github.com/Yaroslav-BV/auth-nestjs-xsa#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "typescript": "^5.1.5"
+  }
+}

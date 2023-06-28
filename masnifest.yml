@@ -1,0 +1,7 @@
+---
+version: 1
+applications:
+  - name: example-app.server
+    path: server
+    services:
+      - example-app.uaa

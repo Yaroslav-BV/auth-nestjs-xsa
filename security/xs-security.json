@@ -1,0 +1,36 @@
+{
+  "xsappname": "example-app",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.View",
+      "description": "View data"
+    },
+    {
+      "name": "$XSAPPNAME.Edit",
+      "description": "Edit data"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Company",
+      "description": "User company",
+      "valueType": "string"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewing Role",
+      "description": "Role to View Data",
+      "default-role-name": "EXAMPLE_APP_VIEW",
+      "scope-references": ["$XSAPPNAME.View"],
+      "attribute-references": ["Company"]
+    },
+    {
+      "name": "Editing Role",
+      "description": "Role to Edit Data",
+      "default-role-name": "EXAMPLE_APP_EDIT",
+      "scope-references": ["$XSAPPNAME.Edit"],
+      "attribute-references": ["Company"]
+    }
+  ]
+}

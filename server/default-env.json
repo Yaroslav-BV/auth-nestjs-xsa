@@ -1,0 +1,24 @@
+{
+  "LOCAL_PORT": 4000,
+  "NODE_TLS_REJECT_UNAUTHORIZED": 0,
+  "VCAP_SERVICES": {
+    "xsuaa": [
+      {
+        "name": "example-app.uaa",
+        "label": "xsuaa",
+        "tags": ["xsuaa"],
+        "plan": "default",
+        "credentials": {
+          "tenantmode": "dedicated",
+          "clientid": "<client-id>",
+          "verificationkey": "<verificationkey>",
+          "xsappname": "example-app",
+          "identityzone": "uaa",
+          "identityzoneid": "uaa",
+          "clientsecret": "<clientsecret>",
+          "url": "<uaa-url>"
+        }
+      }
+    ]
+  }
+}

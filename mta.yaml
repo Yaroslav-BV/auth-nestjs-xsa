@@ -1,0 +1,41 @@
+_schema-version: "3.1.0"
+ID: example-app
+version: 0.0.1
+
+modules:
+  - name: example-app.server
+    type: nodejs
+    path: server
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+        - npm prune --production
+      ignore:
+        [
+          "src/",
+          "test/",
+          ".eslintrc.js",
+          "default-env.json",
+          "nest-cli.json",
+          "tsconfig.*",
+          ".prettierrc",
+          ".cfignore",
+        ]
+    provides:
+      - name: server-api
+        properties:
+          url: ${default-url}
+    requires:
+      - name: example-app.uaa
+    parameters:
+      command: npm run start:prod
+      host: example-app-api
+
+resources:
+  - name: fot-budgeting.uaa
+    parameters:
+      service-plan: default
+      path: security/xs-security.json
+    type: com.sap.xs.uaa
