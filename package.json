@@ -22,7 +22,7 @@
     "nestjs"
   ],
   "author": "Yaroslav Badikov <iav.badikov@gmail.com>",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/Yaroslav-BV/auth-nestjs-xsa/issues"
   },
